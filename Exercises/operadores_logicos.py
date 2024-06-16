@@ -1,0 +1,29 @@
+# AND = Para ser True tudo tem que ser True
+# OR = Para ser True apenas um tem que ser True
+
+print(True and True and True)
+print(True and False and True)
+print(False and False and False)
+print(True or True or True)
+print(True or False or False)
+print(False or False or False)
+
+saldo = 1000
+saque = 650
+limite = 700
+conta_especial = True
+
+#Operação de saque
+exp = saldo >= saque and saque <= limite or conta_especial and saldo >= saque and saque <= limite
+print(exp)
+
+#Operação de saque mais legível
+exp_2 = (saldo >= saque and saque <= limite) or (conta_especial and saldo >= saque and saque <= limite)
+print(exp_2)
+
+#Operação de saque ainda mais legível!
+conta_normal_com_saldo_suficiente = saldo >= saque and saque <= limite
+conta_especial_com_saldo_suficiente = conta_especial and saldo >= saque and saque <= limite
+
+exp_3 = conta_normal_com_saldo_suficiente or conta_especial_com_saldo_suficiente
+print(exp_3)
